@@ -8,5 +8,6 @@ setup(name='dygraph',
       author_email='eric.josien@free.fr',
       license='MIT',
       packages=['dygraph'],
+      include_package_data = True,
       zip_safe=False)
 

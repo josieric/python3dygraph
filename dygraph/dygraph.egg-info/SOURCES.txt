@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+dygraph/__init__.py
+dygraph/dygraph.1.0.1.js
+dygraph.egg-info/PKG-INFO
+dygraph.egg-info/SOURCES.txt
+dygraph.egg-info/dependency_links.txt
+dygraph.egg-info/not-zip-safe
+dygraph.egg-info/top_level.txt
