@@ -1,10 +1,10 @@
 # python3dygraph
 
 * install
-git clone https://github.com/josieric//dygraph.git  
+git clone https://github.com/josieric/python3dygraph.git  
 cd python3dygraph/dygraph  
 python setup.py sdist  
-pip install https://github.com/josieric/python3dygraph.git  
+pip install sdist/dygraph-0.1.tar.gz  
 
 * For Use in python 3 must have a DataFrame indexed by date column in character  
 import pandas as pd  
