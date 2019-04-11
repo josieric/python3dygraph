@@ -6,7 +6,7 @@ cd python3dygraph/dygraph
 python setup.py sdist  
 pip install sdist/dygraph-0.1.tar.gz  
 
-* For Use in python 3 must have a DataFrame indexed by date column in character  
+* For Use in python 3 must have a DataFrame indexed by date column  
 import pandas as pd  
 datas = [{'Date':'2019-01-01 00:00', 'c2':100, 'c3':100}, {'Date':'2019-01-02 00:00','c2':110, 'c3':124},{'Date':'2019-01-02 12:00','c2':90, 'c3':105}, {'Date':'2019-01-03 00:00','c2':120, 'c3':90}]  
 df = pd.DataFrame(datas).set_index('Date')  
