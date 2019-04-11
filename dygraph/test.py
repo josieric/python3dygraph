@@ -4,6 +4,8 @@
 import pandas as pd
 datas = [{'Date':'2019-01-01 00:00', 'c2':100}, {'Date':'2019-01-02 00:00','c2':110},{'Date':'2019-01-02 12:00','c2':90}, {'Date':'2019-01-03 00:00','c2':120}]
 df = pd.DataFrame(datas).set_index('Date')
+datas = [{'Date':'2019-01-01 00:00', 'c2':100 , 'c3':112}, {'Date':'2019-01-02 00:00','c2':110 , 'c3':80},{'Date':'2019-01-02 12:00','c2':90 , 'c3':112}, {'Date':'2019-01-03 00:00','c2':120, 'c3':116}]
+df2 = pd.DataFrame(datas).set_index('Date')
 
 ## Graph Option
 graph_opts = {'legend': 'always','title': 'SI conso', 'ylabel': 'Puissance','showRangeSelector': 'true','connectSeparatedPoints': 'true' }
@@ -14,7 +16,7 @@ graph_opts = {'legend': 'always','title': 'SI conso', 'ylabel': 'Puissance','sho
 import dygraph as dg
 
 print(dg.dygraph(df,graph_opts))
-print(dg.dygraph(df,graph_opts,'mondiv',False))
+print(dg.dygraphSS(df2,graph_opts,'mondiv',False))
 print(dg.dygraph(df,{}, divname='NewGraph', includejs=False))
 
 #dg.to_html_file("t.html",df,{}, divname='NewGraph')
