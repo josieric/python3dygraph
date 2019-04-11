@@ -8,7 +8,7 @@ pip install sdist/dygraph-0.1.tar.gz
 
 * For Use in python 3 must have a DataFrame indexed by date column in character  
 import pandas as pd  
-datas = [{'Date':'2019-01-01 00:00', 'c2':100}, {'Date':'2019-01-02 00:00','c2':110},{'Date':'2019-01-02 12:00','c2':90}, {'Date':'2019-01-03 00:00','c2':120}]  
+datas = [{'Date':'2019-01-01 00:00', 'c2':100, 'c3':100}, {'Date':'2019-01-02 00:00','c2':110, 'c3':124},{'Date':'2019-01-02 12:00','c2':90, 'c3':105}, {'Date':'2019-01-03 00:00','c2':120, 'c3':90}]  
 df = pd.DataFrame(datas).set_index('Date')  
 
 * Graph Option (See dygraph.com for details)  
@@ -21,8 +21,10 @@ print(dygraph(df,graph_opts))
 * others Examples :  
 import dygraph as dg  
 print(dg.dygraph(df,graph_opts))  
-print(dg.dygraph(df,graph_opts,'mondiv',False))  
+* With no graph option and not re-send all javascript (=in the same page)   
 print(dg.dygraph(df,{}, divname='NewGraph', includejs=False))  
+* With Serie Selector !!  
+print(dg.dygraphSS(df,graph_opts,'mondiv',False))  
 
 * simple export to a html autonomous file  
 dg.to_html_file("t.html",df,{}, divname='NewGraph')  
